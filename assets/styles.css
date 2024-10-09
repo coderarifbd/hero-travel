@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --color-primary: #ff5400;
+  --color-dark: #131318;
+  --color-gray: rgba(19, 19, 24, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Mulish", serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 4rem;
+}
+
+.btn-primary {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 12px 20px;
+  background-color: var(--color-primary);
+  color: #fff;
+}
+/* Header styles */
+header {
+  padding: 40px 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 273px;
+  height: 48px;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: end;
+}
+
+nav > ul > li {
+  list-style: none;
+  padding: 10px 15px;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #424247;
+}
+
+nav > ul > li > a:hover {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.banner {
+  margin-top: 40px;
+  height: 500px;
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(22, 22, 22, 0.6) 40%,
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("../Images/banner.png");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  max-width: 676px;
+  text-align: center;
+}
+.banner-title {
+  font-size: 6.4rem;
+  color: #fff;
+  font-weight: 700;
+}
+.banner-description {
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 25px 0;
+}
+
+.search-box {
+  width: 800px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.search-box > input {
+  width: 100%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  outline: 0;
+  border: 0;
+  padding: 10px;
+  font-size: 1.6rem;
+}
+
+.search-box > select {
+  border: 0;
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-size: 1.6rem;
+}
+
+.search-box > select:focus {
+  border: 0;
+  outline: 0;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: none;
+  }
+  .banner {
+    padding: 50px 25px;
+  }
+  .banner-title {
+    font-size: 3.6rem;
+  }
+  .search-box {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+
+  .search-box > select,
+  .search-box > input {
+    padding: 15px;
+    line-height: 1.5;
+  }
+}
