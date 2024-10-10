@@ -19,6 +19,7 @@ html {
 body {
   font-family: "Mulish", serif;
   font-size: 1.6rem;
+  color: rgba(19, 19, 24, 0.7);
 }
 
 .container {
@@ -29,6 +30,13 @@ body {
 
 .heading {
   font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  width: 640px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .btn-primary {
@@ -37,6 +45,13 @@ body {
   padding: 12px 20px;
   background-color: var(--color-primary);
   color: #fff;
+  border: 0;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-family: "Mulish", serif;
 }
 /* Header styles */
 header {
@@ -136,6 +151,7 @@ nav > ul > li > a:hover {
   border: 0;
   padding: 10px;
   font-size: 1.6rem;
+  line-height: 5px;
 }
 
 .search-box > select {
@@ -158,7 +174,73 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+/* popular tours styles */
+.popular-tours {
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  align-items: center;
+}
+
+.popular-tours-content p {
+  color: rgba(19, 19, 27, 0.7);
+  line-height: 1.5;
+}
+
+.popular-tours-content ul {
+  margin: 20px 0;
+}
+
+.popular-tours-content ul li {
+  color: rgba(19, 19, 27, 0.7);
+  margin: 20px 20px 0 20px;
+  line-height: 1.5;
+}
+
+.popular-tours-img img {
+  width: 100%;
+}
+
+.popular-tours-content > .btn-primary {
+  margin-top: 20px;
+}
+
+.destination {
+  padding: 60px 0;
+}
+
+.maldives {
+  grid-area: maldives;
+}
+.indonesia {
+  grid-area: indonesia;
+}
+.srilanka {
+  grid-area: srilanka;
+}
+
+.destination-boxes {
+  display: grid;
+  grid-template-areas:
+    "maldives maldives maldives maldives maldives maldives indonesia indonesia indonesia indonesia indonesia indonesia"
+    "srilanka srilanka srilanka srilanka srilanka";
+  gap: 10px;
+}
+
+.destination-boxes div {
+  height: 300px;
+}
+
+.destination-boxes img {
+  width: 100%;
+}
+
 @media screen and (max-width: 576px) {
+  .section-header {
+    width: 100%;
+  }
+
   nav {
     flex-direction: column;
   }
@@ -182,5 +264,10 @@ input[type="submit"] {
   .search-box > input {
     padding: 15px;
     line-height: 1.5;
+  }
+
+  .popular-tours {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 50px 15px;
   }
 }
