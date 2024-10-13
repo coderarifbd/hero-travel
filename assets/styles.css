@@ -210,30 +210,74 @@ input[type="submit"] {
   padding: 60px 0;
 }
 
-.maldives {
-  grid-area: maldives;
+.destination-boxes {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  /* grid-template-rows: 300px 286px 300px; */
 }
+
+.maldives {
+  grid-column: 1 / 7;
+}
+
 .indonesia {
-  grid-area: indonesia;
+  grid-column: 7 / -1;
 }
 .srilanka {
-  grid-area: srilanka;
+  grid-column: 1 / 4;
+}
+.america {
+  grid-column: 4 / 10;
 }
 
-.destination-boxes {
-  display: grid;
-  grid-template-areas:
-    "maldives maldives maldives maldives maldives maldives indonesia indonesia indonesia indonesia indonesia indonesia"
-    "srilanka srilanka srilanka srilanka srilanka";
-  gap: 10px;
+.kashmir {
+  grid-column: 10 / -1;
 }
 
-.destination-boxes div {
-  height: 300px;
+.bangladesh {
+  grid-column: 1 / 5;
 }
 
+.bandarban {
+  grid-column: 5 / -1;
+}
 .destination-boxes img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.destination-box {
+  position: relative;
+}
+
+.destination-box h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: 999;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  background: rgba(19, 19, 24, 0.3);
+  padding: 10px 25px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 @media screen and (max-width: 576px) {
@@ -269,5 +313,12 @@ input[type="submit"] {
   .popular-tours {
     grid-template-columns: repeat(1, 1fr);
     padding: 50px 15px;
+  }
+  .destination {
+    padding: 50px 15px;
+  }
+
+  .destination-box {
+    grid-column: 1 / -1;
   }
 }
